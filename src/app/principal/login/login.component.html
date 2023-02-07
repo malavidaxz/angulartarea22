@@ -1,0 +1,14 @@
+<form>
+<section class="col-3 container border border-3 p-3 mt-5">
+    <h2>Auth Login</h2>
+    <section class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" name="usuario" [(ngModel)]="usu" (input)="validacion()">
+    </section>
+    <section class="form-group mt-3">
+        <label for="password">Password:</label>
+        <input type="text" class="form-control" id="password" name="contraseña" [(ngModel)]="pass" (input)="validacion()">
+    </section>
+        <input class="btn btn-primary mt-4 col-5" (click)="login(); validacion()" value="Login" [disabled]="deshabilitado">
+</section>
+</form>
